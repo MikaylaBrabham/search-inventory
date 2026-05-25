@@ -23,6 +23,11 @@ public class SearchInventory {
             System.out.println("5 - Quit");
             System.out.println("Enter command: ");
 
+            int command = Integer.parseInt(myScanner.nextLine());
+
+            //add switch
+
+
 
         }
 
