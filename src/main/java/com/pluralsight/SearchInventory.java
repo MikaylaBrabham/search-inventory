@@ -26,29 +26,51 @@ public class SearchInventory {
             int command = Integer.parseInt(myScanner.nextLine());
 
             //add switch
-
-
-
+            switch (command) {
+                case 1:
+                    listAllProducts();
+                    break;
+                case 2:
+                    lookupById();
+                    break;
+                case 3:
+                    searchByPriceRange();
+                    break;
+                case 4:
+                    addProduct();
+                    break;
+                case 5:
+                    return;
+                default:
+                    System.out.println("Invalid option.");
+            }
         }
-
-
-
-
-
-        System.out.println("Please make a selection from our current inventory.");
     }
 
     // insert getinventory method here to create list of products
-    public static void getInventory() {
+    public static ArrayList<Products> getInventory() {
+        // create an empty list of products
+        ArrayList<Products> products = new ArrayList<>();
 
-       // create an empty list of products
-        ArrayList<String> products = new ArrayList<String>();
+
         // add a minimum of 5 products to the list
-        products.add("Black pearls");
-        products.add("Popping Boba");
-        products.add("Tapioca Starch");
-        products.add("Boba Straws");
-        products.add("Boba Cups");
+        products.add(new Products(1209, "Black pearls", 5.09f));
+        products.add(new Products(2356, "Popping Boba", 13.76f));
+        products.add(new Products(8907, "Tapioca Starch", 7.98f));
+        products.add(new Products(5674, "Boba Straws", 5.34f));
+        products.add(new Products(2390, "Boba Cups", 12.76f));
+
+        //products
+        return products;
+    }
+
+    //add list options
+
+    //add lookup by id
+
+    //searchby price range
+
+    //addproducts
 
 
 
