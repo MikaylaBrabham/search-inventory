@@ -4,9 +4,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class SearchInventory {
+    // insert my scanner to get user input
+    Scanner myScanner = new Scanner(System.in);
 
+    //add an array for product
+    static ArrayList<Products> inventory = getInventory();
+
+    //add main
     public static void main(String[] args) {
-        // insert my scanner to get user input
+
+
+
+
+
         System.out.println("Please make a selection from our current inventory.");
     }
 
