@@ -5,13 +5,26 @@ import java.util.Scanner;
 
 public class SearchInventory {
     // insert my scanner to get user input
-    Scanner myScanner = new Scanner(System.in);
+   static Scanner myScanner = new Scanner(System.in);
 
     //add an array for product
     static ArrayList<Products> inventory = getInventory();
 
     //add main
     public static void main(String[] args) {
+
+        //add while statement to get menu options
+        while (true) {
+            System.out.println("What do you want to do?");
+            System.out.println("1 - list all products");
+            System.out.println("2 - Lookup product by id");
+            System.out.println("3 - Find products within price range");
+            System.out.println("4 - Add new product");
+            System.out.println("5 - Quit");
+            System.out.println("Enter command: ");
+
+
+        }
 
 
 
