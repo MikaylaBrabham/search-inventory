@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class SearchInventory {
     // insert my scanner to get user input
-   static Scanner myScanner = new Scanner(System.in);
+    static Scanner myScanner = new Scanner(System.in);
 
     //add an array for product
     static ArrayList<Products> inventory = getInventory();
@@ -107,7 +107,7 @@ public class SearchInventory {
 
     //addproducts
     public static void addProduct() {
-       //add sout for product details
+        //add sout for product details
         System.out.println("Enter product Id: ");
         int id = Integer.parseInt(myScanner.nextLine());
 
@@ -122,22 +122,13 @@ public class SearchInventory {
 
         //add successful output
         System.out.println("The product was successfully added.");
-
-
-
-
-
-        {
-
-
-
-
-
-        System.out.println("Please make a selection from our current inventory: ");
-
     }
 
+    //add display logic and display
+    public static void displayProduct(Products products) {
+        System.out.printf("ID: %d Name: %s Price: $%.2f%n",
+                products.getId(),
+                products.getName(),
+                products.getPrice());
     }
-
-
 }
