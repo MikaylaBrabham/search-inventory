@@ -65,12 +65,49 @@ public class SearchInventory {
     }
 
     //add list options
+    public static void listAllProducts() {
+        for (Products products : inventory) {
+            displayProduct(products);
+        }
+    }
 
     //add lookup by id
+    public static void lookupById() {
+        System.out.println("Enter product Id: ");
+        int id = Integer.parseInt(myScanner.nextLine());
 
-    //searchby price range
+        for (Products products : inventory) {
+            if (products.getId() == id) {
+                displayProduct(products);
+                return;
+            }
+        }
+        //product not found
+        System.out.println("Product not found.");
+
+    }
+
+
+    //search by price range
+    public static void searchByPriceRange() {
+        //add min and max
+        System.out.println("Enter minimum price: ");
+        float min = Float.parseFloat(myScanner.nextLine());
+
+        System.out.println("Enter maximum price: ");
+        float max = Float.parseFloat(myScanner.nextLine());
+
+        for (Products products : inventory) {
+            if (products.getPrice() >= min && products.getPrice() <= max) {
+                displayProduct(products);
+
+            }
+        }
+    }
 
     //addproducts
+    public static void addProduct() {
+        System.out.println("Enter product Id:");
 
 
 
