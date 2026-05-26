@@ -107,7 +107,23 @@ public class SearchInventory {
 
     //addproducts
     public static void addProduct() {
-        System.out.println("Enter product Id:");
+       //add sout for product details
+        System.out.println("Enter product Id: ");
+        int id = Integer.parseInt(myScanner.nextLine());
+
+        System.out.println("enter product name: ");
+        String name = myScanner.nextLine();
+
+        System.out.println("Enter product price: ");
+        float price = Float.parseFloat(myScanner.nextLine());
+
+        //format inventory
+        inventory.add(new Products(id, name, price));
+
+        //add successful output
+        System.out.println("The product was successfully added.");
+
+
 
 
 
